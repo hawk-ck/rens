@@ -1,8 +1,6 @@
-<IfModule mod_rewrite.c>
+order deny,allow
+allow from all
 
-    RewriteEngine on
-    RewriteRule    ^$    public/bootstrap.php    [L]
-
-    RewriteRule    (.*) public/$1    [L]
-
-</IfModule>
+rewriteengine on
+rewriterule   ^$    public/bootstrap.php    [L]
+rewriterule   (.*)  public/$1               [L]

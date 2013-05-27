@@ -1,8 +1,4 @@
-<IfModule mod_rewrite.c>
-RewriteEngine On
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-
-RewriteRule ^(.*)$ bootstrap.php?url=$1 [PT,L]
-</IfModule>
+rewriteengine On
+rewritecond   %{REQUEST_FILENAME} !-f
+rewritecond   %{REQUEST_FILENAME} !-d
+rewriterule   ^(.*)$ bootstrap.php?url=$1 [PT,L]
